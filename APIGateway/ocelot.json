@@ -1,0 +1,27 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Test/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "11.0.0.100",
+          "Port": 5000
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Test",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "CustomAuth"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://api.mybusiness.com"
+  }
+}
